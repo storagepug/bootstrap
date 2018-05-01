@@ -11,7 +11,9 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: $btn-border-width solid transparent;
+  // border: $btn-border-width solid transparent;
+  border: 1px solid #b5d2e1;
+  border-radius: .25rem;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -20,11 +22,16 @@
     text-decoration: none;
   }
 
+  @include hover {
+    color: #3d73b9;
+  }
+
   &:focus,
   &.focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
   }
+
 
   // Disabled comes first so active can properly restyle
   &.disabled,
